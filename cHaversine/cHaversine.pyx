@@ -8,8 +8,10 @@ def haversine(tuple coord1, tuple coord2):
     cdef double lng1
     cdef double lat2
     cdef double lng2
-    lat1, lng1 = coord1
-    lat2, lng2 = coord2
+    lat1 = coord1[0]
+    lng1 = coord1[1]
+    lat2 = coord2[0]
+    lng2 = coord2[1]
 
     if lat1 == lat2 and lng1 == lng2:
         return 0
